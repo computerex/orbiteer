@@ -1,0 +1,22 @@
+version: "3.1"
+services:
+    orbiteer-database:
+      image: mysql:5.6
+      working_dir: /application
+      environment:
+        MYSQL_ROOT_PASSWORD: ""
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      ports:
+        - "6669:3306"
+    
+    orbiteer-api:
+      build:
+        context: .
+        dockerfile: dockerfiles/api/Dockerfile
+      image: orbiteer-api-server
+      ports:
+        - 8066:5005
+      environment:
+        - THIS_INSTANCE_URL=http://localhost:8066
+      volumes:
+        - .:/application
