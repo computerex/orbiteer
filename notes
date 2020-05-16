@@ -1,9 +1,9 @@
+Orbiteer Corp
+
 1. rent spacecraft
  - cargo deliveries
- - re-fueling
  - tourism
  - transportation
- - spacecraft pick up
 
 2. buy spacecraft, and rent to other players
 3. build bases around solar system. Refueling proceeds go to base owner. 
@@ -13,7 +13,9 @@ user (balance, info, location)
 spacecrafts_type
 spacecrafts
 
-bases (location, vessel position, owner, fuel amount)
+bases (location, vessel position, owner, fuel amount, oxygen, food, supplies)
 
 assignments (type, base waypoints)
 user_assignments
+
+assignment generation
